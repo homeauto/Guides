@@ -1,0 +1,15 @@
+I use xfce4.4-RC (testing repo) and tightvnc. I use these to start it up:
+
+~/.vnc/xstartup
+
+#!/bin/sh
+exec dbus-launch ~/.vnc/vncxfce4
+
+~/.vnc/vncxfce4
+
+#!/bin/sh
+#### XFCE4 #####
+xfce-mcs-manager &
+xfwm4 &
+xfdesktop &
+xfce4-panel &
